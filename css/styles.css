@@ -608,3 +608,43 @@ img {
 .footer-icon-stil {
   fill: #f4f4fd;
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(46, 47, 66, 0.40);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.model {
+  width: 408px;
+  height: 584px;
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.20));
+border-radius: 4px;
+  background-color: #FCFCFC;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 24px;
+
+  }
+.model-close-btn{
+  margin-left: auto;
+  background-color: #FCFCFC;
+  border: transparent;
+}
+.model-close-ikon{
+  
+}
