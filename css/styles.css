@@ -494,7 +494,7 @@ img {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .footer {
-  background:  #2e2f42;
+  background: #2e2f42;
   padding: 100px 0;
 }
 .footer-web {
@@ -595,7 +595,7 @@ img {
 .footer-social {
   display: flex;
   flex-direction: column;
- 
+
   margin-right: 80px;
 }
 
@@ -606,26 +606,24 @@ img {
 .final {
   display: flex;
   justify-content: baseline;
-  
- }
+}
 
 .footer-icon-stil {
   fill: #f4f4fd;
 }
 
-.footer-form-media{
+.footer-form-media {
   display: flex;
   flex-direction: column;
 }
 
-.footer-form{
+.footer-form {
   display: flex;
   gap: 24px;
 }
 
-.footer-sub{
+.footer-sub {
   display: block;
-
 }
 
 .footer-input {
@@ -664,13 +662,18 @@ img {
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  
-gap: 16px;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 165px;
+  cursor: pointer;
 }
 
 .footer-btn:hover {
   background-color: #404bbf;
+}
+
+.icon-subscribe {
+  margin-left: 16px;
   fill: #ffffff;
 }
 
@@ -685,6 +688,9 @@ gap: 16px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -695,31 +701,36 @@ gap: 16px;
 
 .model {
   width: 408px;
-  height: 584px;
-  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14))
-    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12))
-    drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
+  min-height: 584px;
+  box-shadow: (0px 1px 1px rgba(0, 0, 0, 0.14)),
+    (0px 1px 3px rgba(0, 0, 0, 0.12)), (0px 1px 2px rgba(0, 0, 0, 0.2));
   border-radius: 4px;
   background-color: #fcfcfc;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .model-close-btn {
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
   border-radius: 50%;
-  border: #0000001a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: auto;
-  margin-bottom: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
   font-family: inherit;
+padding: 0;
+cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
 
 .model-close-btn:hover {
@@ -727,7 +738,9 @@ gap: 16px;
   fill: #ffffff;
 }
 
-.model-close-ikon {
+.model-close-btn:focus {
+  background-color: #404bbf;
+  fill: #ffffff;
 }
 
 .model-text {
@@ -749,7 +762,7 @@ gap: 16px;
   background-color: transparent;
   outline: transparent;
   padding-left: 38px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -796,14 +809,15 @@ gap: 16px;
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   display: block;
   margin-bottom: 4px;
+
 }
 
 .modal-filed {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-filed-chek {
@@ -819,26 +833,32 @@ gap: 16px;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 .model-text-wrap {
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
 
   width: 100%;
   height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   outline: transparent;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
+  padding: 8px 16px;
   resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.model-text-wrap:focus{
+  border-color: #4D5AE5;
 }
 
 .check-text {
@@ -872,7 +892,13 @@ gap: 16px;
 .check-box:checked + .check-text span {
   background-color: #404bbf;
   border: none;
+  fill: #F4F4FD;
 }
 
-.check-icon {
+.chek-span{
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  fill: transparent;
 }
+
