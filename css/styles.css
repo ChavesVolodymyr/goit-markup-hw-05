@@ -630,20 +630,25 @@ img {
   min-width: 264px;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid var(--WHITE, #fff);
+  border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #ffffff;
 }
 
 .footer-input::placeholder {
-  color: var(--WHITE, #fff);
-  font-size: 12px;
+    font-size: 12px;
   font-weight: 400;
   line-height: 2;
   letter-spacing: 0.04em;
+color: #ffffff;
 }
 
 .footer-btn {
@@ -703,7 +708,7 @@ img {
   width: 408px;
   min-height: 584px;
   box-shadow: (0px 1px 1px rgba(0, 0, 0, 0.14)),
-    (0px 1px 3px rgba(0, 0, 0, 0.12)), (0px 1px 2px rgba(0, 0, 0, 0.2));
+    (0px 1px 3px rgba(0, 0, 0, 0.12)), (0px 2px 1px rgba(0, 0, 0, 0.2));
   border-radius: 4px;
   background-color: #fcfcfc;
   position: absolute;
@@ -736,11 +741,17 @@ cursor: pointer;
 .model-close-btn:hover {
   background-color: #404bbf;
   fill: #ffffff;
+  border: none;
 }
 
 .model-close-btn:focus {
   background-color: #404bbf;
   fill: #ffffff;
+  border: none;
+}
+
+.model-close-ikon{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .model-text {
@@ -817,7 +828,7 @@ cursor: pointer;
 }
 
 .modal-filed {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .modal-filed-chek {
@@ -882,11 +893,14 @@ cursor: pointer;
   height: 16px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  display: flex;
-  margin-right: 8px;
+    margin-right: 8px;
   align-items: center;
   justify-content: center;
   fill: #404bbf;
+  border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    fill: transparent;
 }
 
 .check-box:checked + .check-text span {
@@ -896,9 +910,9 @@ cursor: pointer;
 }
 
 .chek-span{
-  border-radius: 2px;
+  /* border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
-  fill: transparent;
+  fill: transparent; */
 }
 
