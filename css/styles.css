@@ -303,7 +303,7 @@ img {
 
 .team-all {
   display: flex;
-  align-content: space-around;
+  /* align-content: space-around; */
   align-items: center;
   gap: 24px;
 }
